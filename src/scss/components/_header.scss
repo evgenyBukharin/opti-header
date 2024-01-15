@@ -1,0 +1,16 @@
+.header {
+	color: var(--black-color);
+	&__container {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		&-location {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__location {
+		font-size: 14px;
+		line-height: normal;
+		margin-left: 8px;
+	}
+}
