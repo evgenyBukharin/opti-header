@@ -1,0 +1,14 @@
+.burger {
+	@include burger;
+	display: none;
+	--burger-width: 22px;
+	--burger-height: 16px;
+	--burger-line-height: 2px;
+	color: var(--black-color);
+}
+
+@media (max-width: 480px) {
+	.burger {
+		display: unset;
+	}
+}

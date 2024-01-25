@@ -1,16 +1,249 @@
 .header {
 	color: var(--black-color);
 	&__container {
-		padding-top: 12px;
-		padding-bottom: 12px;
+		// padding-top: 12px;
+		// padding-bottom: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
 		&-location {
 			display: flex;
 			align-items: center;
+		}
+		&-phone {
+			&-popup {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-width: 240px;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s ease, visibility 0.3s ease;
+				&:hover {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			&-block {
+				padding: 15px 16px;
+				border-radius: 8px;
+				background: var(--white-color);
+				box-shadow: 0 5px 30px rgba(34, 34, 34, 0.1);
+				display: flex;
+				flex-direction: column;
+				gap: 11px;
+				&:not(:last-child) {
+					margin-bottom: 4px;
+				}
+				&-notbold {
+					& .header__link-text {
+						font-weight: 400;
+						&-sub {
+							margin-top: 0;
+							margin-bottom: 2px;
+						}
+					}
+				}
+			}
 		}
 	}
 	&__location {
 		font-size: 14px;
 		line-height: normal;
 		margin-left: 8px;
+	}
+	&__phone {
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding: 15px 16px;
+		& .header__link-text {
+			display: block;
+			padding-right: 5px;
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		color: var(--black-color);
+		font-size: 15px;
+		line-height: 19px;
+		text-decoration: none;
+		font-weight: 600;
+		&-flex {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			transition: color 0.3s ease;
+			&:hover {
+				color: var(--light-blue-color);
+			}
+		}
+		&-text {
+			&-sub {
+				font-size: 12px;
+				line-height: 16px;
+				color: #999;
+				font-weight: 400;
+				margin-top: 2px;
+			}
+		}
+		&-root {
+			&:hover {
+				& ~ .header {
+					&__container {
+						&-phone {
+							&-popup {
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&__button {
+		&-phone {
+			margin-left: 11px;
+			font-size: 14px;
+			line-height: normal;
+			color: var(--black-color);
+			transition: color 0.3s ease;
+			&:hover {
+				color: var(--light-blue-color);
+			}
+			&-blue {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				color: var(--white-color);
+				font-size: 14px;
+				line-height: 33px;
+				border-radius: 9px;
+				background: var(--light-blue-color);
+				padding: 1px 20px;
+				text-decoration: none;
+				font-weight: 600;
+			}
+		}
+		&-enter {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 3px;
+			text-decoration: none;
+			&-text {
+				font-size: 14px;
+				line-height: 19px;
+				color: var(--black-color);
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+			&:hover {
+				& .header {
+					&__icon {
+						fill: var(--light-blue-color);
+					}
+					&__button-text {
+						color: var(--light-blue-color);
+					}
+				}
+			}
+		}
+	}
+	&__icon {
+		&-location {
+			width: 17px;
+			height: 16px;
+			fill: transparent;
+			stroke: var(--black-color);
+			stroke-width: 38px;
+		}
+		&-user {
+			width: 18px;
+			height: 18px;
+			transition: fill 0.3s ease;
+		}
+		&-basket {
+			width: 21px;
+			height: 20px;
+			transition: fill 0.3s ease;
+		}
+	}
+	&__call {
+		display: flex;
+		align-items: center;
+		gap: 18px;
+	}
+	&__logo {
+		margin-left: 14px;
+	}
+	&__wave {
+		background: rgba(255, 255, 255, 0.64);
+		border-radius: 50%;
+		transform: scale(0);
+		animation: wave 0.5s linear;
+		pointer-events: none;
+		position: absolute;
+	}
+}
+@keyframes wave {
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+@media (max-width: 1050px) {
+	.header {
+		&__container {
+			flex-wrap: wrap;
+			row-gap: 0;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		&__container {
+			padding-top: 10px;
+		}
+		&__button {
+			&-phone {
+				display: none;
+			}
+			&-text {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.header {
+		&__location {
+			display: none;
+		}
+		&__icon {
+			&-location {
+				display: none;
+			}
+			&-user {
+				width: 26px;
+				height: 26px;
+			}
+			&-basket {
+				width: 26px;
+				height: 25px;
+			}
+		}
+		&__phone {
+			display: none;
+		}
+		&__call {
+			gap: 24px;
+		}
 	}
 }

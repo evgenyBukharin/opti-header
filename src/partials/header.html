@@ -1,11 +1,155 @@
 <header class="header">
 	<div class="container header__container">
 		<div class="header__container-location">
-			<img src="./img/location-arrow.svg" class="image" width="17" height="16" alt="Стрелка" />
+			<svg class="header__icon-location">
+				<use xlink:href="./img/sprite.svg#location-arrow"></use>
+			</svg>
 			<span class="header__location">Москва</span>
+			<button class="burger">
+				<span class="burger__line"></span>
+			</button>
+			<img src="./img/logo.svg" class="image header__logo" width="49" height="34" alt="Логотип OPTI" />
 		</div>
-		<a href="/" class="header__link-logo">
-			<img src="./img/logo.svg" class="image header__logo" width="79" height="55" alt="логотип компании" />
-		</a>
+		<nav class="nav" title="Навигационная панель">
+			<ul class="nav__list list-reset">
+				<li class="nav__item nav__item-dropdown">
+					<a href="#" class="nav__link">
+						<span class="nav__link-text">Компания</span>
+						<svg class="nav__triangle">
+							<use xlink:href="./img/sprite.svg#bottom-triangle"></use>
+						</svg>
+					</a>
+					<div class="nav__container-list">
+						<ul class="list-reset nav__list">
+							<li class="nav__item"><a href="#" class="nav__link nav__link-inner">О компании</a></li>
+							<li class="nav__item"><a href="#" class="nav__link nav__link-inner">Наша команда</a></li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Сертификаты и компетенции</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Новости и акции</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Отзывы</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Статьи</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Вопрос/ответ</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Вакансии</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Реквизиты</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav__item"><a href="#" class="nav__link">Лицензии</a></li>
+				<li class="nav__item nav__item-dropdown">
+					<a href="#" class="nav__link">
+						<span class="nav__link-text">Наши проекты</span>
+						<svg class="nav__triangle">
+							<use xlink:href="./img/sprite.svg#bottom-triangle"></use>
+						</svg>
+					</a>
+					<div class="nav__container-list">
+						<ul class="list-reset nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Корпоративные сайты</a>
+							</li>
+							<li class="nav__item"><a href="#" class="nav__link nav__link-inner">Web-разработка</a></li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Автоматизация продаж</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Внедрение CRM - проекты</a>
+							</li>
+							<li class="nav__item"><a href="#" class="nav__link nav__link-inner">ЧАТ-боты</a></li>
+							<li class="nav__item"><a href="#" class="nav__link nav__link-inner">Бизнес-процессы</a></li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">3D моделирование и визуализация</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Продвижение и SEO</a>
+							</li>
+							<li class="nav__item"><a href="#" class="nav__link nav__link-inner">Ip-телефония</a></li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link-inner">Переход на Битрикс24</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="header__call">
+			<div class="header__phone">
+				<a class="header__link header__link-root">
+					<span class="header__link-text">+7 800 201-65-16</span>
+					<svg class="nav__triangle">
+						<use xlink:href="./img/sprite.svg#bottom-triangle"></use>
+					</svg>
+				</a>
+				<button class="btn-reset header__button-phone">Заказать звонок</button>
+				<div class="header__container-phone-popup">
+					<div class="header__container-phone-block">
+						<div class="header__row">
+							<a href="tel:88002016516" class="header__link header__link-flex">
+								<span class="header__link-text">+7 800 201-65-16</span>
+								<p class="margin-reset header__link-text-sub">Отдел продаж</p>
+							</a>
+						</div>
+						<div class="header__row">
+							<a href="tel:88002016516" class="header__link header__link-flex">
+								<span class="header__link-text">+7 800 201-65-16</span>
+								<p class="margin-reset header__link-text-sub">Бухгалтерия</p>
+							</a>
+						</div>
+						<div class="header__row">
+							<a href="tel:88002016516" class="header__link header__link-flex">
+								<span class="header__link-text">+7 800 201-65-16</span>
+								<p class="margin-reset header__link-text-sub">Директор</p>
+							</a>
+						</div>
+						<button class="btn-reset header__button-phone-blue">Заказать звонок</button>
+					</div>
+					<div class="header__container-phone-block header__container-phone-block-notbold">
+						<div class="header__row">
+							<a href="mailto:opti.ooo@info" class="header__link header__link-flex">
+								<p class="margin-reset header__link-text-sub">Email</p>
+								<span class="header__link-text">opti.ooo@info</span>
+							</a>
+						</div>
+						<div class="header__row">
+							<a href="#" class="header__link header__link-flex">
+								<p class="margin-reset header__link-text-sub">Адрес</p>
+								<span class="header__link-text">ул. Братьев Кашириных, 32, 20 офис; 2 этаж</span>
+							</a>
+						</div>
+						<div class="header__row">
+							<a href="#" class="header__link header__link-flex">
+								<p class="margin-reset header__link-text-sub">Режим работы</p>
+								<span class="header__link-text">Пн. – Пт.: с 9:00 до 18:00</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="btn-reset header__button-enter">
+				<svg class="header__icon header__icon-user">
+					<use xlink:href="./img/sprite.svg#user"></use>
+				</svg>
+				<span class="header__button-text header__button-enter-text">Войти</span>
+			</a>
+			<a href="#" class="btn-reset header__button-enter">
+				<svg class="header__icon header__icon-basket">
+					<use xlink:href="./img/sprite.svg#basket"></use>
+				</svg>
+				<span class="header__button-text header__button-enter-text">Корзина</span>
+			</a>
+		</div>
 	</div>
 </header>
