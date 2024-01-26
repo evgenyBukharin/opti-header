@@ -52,6 +52,7 @@
 		font-size: 14px;
 		line-height: normal;
 		margin-left: 8px;
+		transition: color 0.3s ease;
 	}
 	&__phone {
 		display: flex;
@@ -152,6 +153,21 @@
 				}
 			}
 		}
+		&-location {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			&:hover {
+				& .header {
+					&__icon-location {
+						stroke: var(--light-blue-color);
+					}
+					&__location {
+						color: var(--light-blue-color);
+					}
+				}
+			}
+		}
 	}
 	&__icon {
 		&-location {
@@ -160,6 +176,7 @@
 			fill: transparent;
 			stroke: var(--black-color);
 			stroke-width: 38px;
+			transition: stroke 0.3s ease;
 		}
 		&-user {
 			width: 18px;
@@ -196,7 +213,7 @@
 	}
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
 	.header {
 		&__container {
 			flex-wrap: wrap;

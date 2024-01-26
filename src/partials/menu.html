@@ -108,11 +108,41 @@
 			</div>
 		</div>
 		<div class="menu__container-bordered-bottom">
-			<div class="menu__container-location">
-				<svg class="menu__icon-location">
-					<use xlink:href="./img/sprite.svg#location-arrow"></use>
+			<div class="menu__row menu__row-nav">
+				<div class="menu__title-row currentCity"></div>
+				<svg class="menu__triangle">
+					<use xlink:href="./img/sprite.svg#bottom-triangle"></use>
 				</svg>
-				<span class="menu__location">Москва</span>
+				<div class="menu__container-list">
+					<button class="btn-reset menu__button-back">
+						<svg class="menu__arrow-left">
+							<use xlink:href="./img/sprite.svg#left-arrow"></use>
+						</svg>
+						Назад
+					</button>
+					<ul class="list-reset menu__list">
+						<li class="menu__item">
+							<a class="menu__link menu__link-inner">
+								Города
+								<svg class="menu__arrow-left menu__arrow-left-reverse">
+									<use xlink:href="./img/sprite.svg#left-arrow"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link menu__link-inner menu__link-inner-city">Челябинск</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link menu__link-inner menu__link-inner-city">Екатеринбург</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link menu__link-inner menu__link-inner-city">Магнитогорск</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link menu__link-inner menu__link-inner-city">Москва</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

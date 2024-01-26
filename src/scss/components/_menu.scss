@@ -58,6 +58,11 @@
 				}
 			}
 		}
+		&-flex {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
 	}
 	&__row {
 		&-relative {
@@ -127,11 +132,15 @@
 	}
 	&__icon {
 		&-location {
-			width: 17px;
-			height: 16px;
+			width: 18px;
+			height: 17px;
 			fill: transparent;
 			stroke: var(--black-color);
 			stroke-width: 38px;
+		}
+		&-user {
+			width: 18px;
+			height: 18px;
 		}
 	}
 }
