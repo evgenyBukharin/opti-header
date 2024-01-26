@@ -97,6 +97,15 @@
 			line-height: 21px;
 			color: var(--black-color);
 			text-decoration: none;
+			&-iconed {
+				display: flex;
+				align-items: center;
+				gap: 14px;
+			}
+			&-phone {
+				display: flex;
+				flex-direction: column;
+			}
 		}
 	}
 	&__triangle {
@@ -112,6 +121,17 @@
 		font-size: 15px;
 		line-height: 19px;
 		padding: 10px 0;
+		&-inner {
+			&-sub {
+				color: #999999;
+				font-size: 12px;
+				line-height: 19px;
+			}
+			&-flex {
+				display: flex;
+				flex-direction: column;
+			}
+		}
 	}
 	&__arrow {
 		&-left {
@@ -129,6 +149,35 @@
 			gap: 12px;
 			margin-bottom: 27px;
 		}
+		&-phone {
+			margin-left: 11px;
+			font-size: 14px;
+			line-height: normal;
+			color: var(--black-color);
+			transition: color 0.3s ease;
+			&:hover {
+				color: var(--light-blue-color);
+			}
+			&-blue {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				color: var(--white-color);
+				font-size: 14px;
+				line-height: 33px;
+				border-radius: 9px;
+				background: var(--light-blue-color);
+				padding: 1px 20px;
+				text-decoration: none;
+				font-weight: 600;
+				&-faded {
+					background: var(--white-color);
+					color: var(--light-blue-color);
+					border: 1px solid var(--light-blue-color);
+					margin-top: 14px;
+				}
+			}
+		}
 	}
 	&__icon {
 		&-location {
@@ -141,6 +190,23 @@
 		&-user {
 			width: 18px;
 			height: 18px;
+		}
+		&-basket {
+			width: 18px;
+			height: 18px;
+		}
+	}
+	&__list {
+		&-phones {
+			& .menu {
+				&__link {
+					&-text {
+						font-size: 18px;
+						line-height: 21px;
+						color: var(--black-color);
+					}
+				}
+			}
 		}
 	}
 }

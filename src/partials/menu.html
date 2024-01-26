@@ -109,7 +109,12 @@
 		</div>
 		<div class="menu__container-bordered-bottom">
 			<div class="menu__row menu__row-nav">
-				<div class="menu__title-row currentCity"></div>
+				<div class="menu__title-row menu__title-row-iconed">
+					<svg class="menu__icon-location">
+						<use xlink:href="./img/sprite.svg#location-arrow"></use>
+					</svg>
+					<span class="currentCity"></span>
+				</div>
 				<svg class="menu__triangle">
 					<use xlink:href="./img/sprite.svg#bottom-triangle"></use>
 				</svg>
@@ -143,6 +148,83 @@
 						</li>
 					</ul>
 				</div>
+			</div>
+			<div class="menu__row menu__row-nav">
+				<a href="#" class="menu__title-row menu__title-row-iconed">
+					<svg class="menu__icon menu__icon-user">
+						<use xlink:href="./img/sprite.svg#user"></use>
+					</svg>
+					Кабинет
+				</a>
+			</div>
+			<div class="menu__row menu__row-nav">
+				<a href="#" class="menu__title-row menu__title-row-iconed">
+					<svg class="menu__icon menu__icon-basket">
+						<use xlink:href="./img/sprite.svg#basket"></use>
+					</svg>
+					Корзина
+				</a>
+			</div>
+		</div>
+		<div class="menu__container-bordered-bottom">
+			<div class="menu__row menu__row-nav">
+				<div class="menu__title-row menu__title-row-phone">
+					<span>+7 800 201-65-16</span>
+					<span class="menu__link-inner-sub">Отдел продаж</span>
+				</div>
+				<svg class="menu__triangle">
+					<use xlink:href="./img/sprite.svg#bottom-triangle"></use>
+				</svg>
+				<div class="menu__container-list">
+					<button class="btn-reset menu__button-back">
+						<svg class="menu__arrow-left">
+							<use xlink:href="./img/sprite.svg#left-arrow"></use>
+						</svg>
+						Назад
+					</button>
+					<ul class="list-reset menu__list menu__list-phones">
+						<li class="menu__item">
+							<a href="#" class="menu__link menu__link-inner">
+								Телефоны
+								<svg class="menu__arrow-left menu__arrow-left-reverse">
+									<use xlink:href="./img/sprite.svg#left-arrow"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="tel:78002016516" class="menu__link menu__link-inner menu__link-inner-flex">
+								<span class="menu__link-text">+7 800 201-65-16</span>
+								<span class="menu__link-inner-sub">Отдел продаж</span>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="tel:78002016516" class="menu__link menu__link-inner menu__link-inner-flex">
+								<span class="menu__link-text">+7 800 201-65-16</span>
+								<span class="menu__link-inner-sub">Бухгалтерия</span>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="tel:78002016516" class="menu__link menu__link-inner menu__link-inner-flex">
+								<span class="menu__link-text">+7 800 201-65-16</span>
+								<span class="menu__link-inner-sub">Директор</span>
+							</a>
+						</li>
+						<li class="menu__item">
+							<button class="btn-reset menu__button-phone-blue menu__button-phone-blue-faded">
+								Заказать звонок<span class="menu__wave"></span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu__row menu__row-nav">
+				<a href="mailto:opti.ooo@info" class="menu__title-row">opti.ooo@info</a>
+			</div>
+			<div class="menu__row menu__row-nav">
+				<a class="menu__title-row">ул. Братьев Кашириных, 32, 20 офис; 2 этаж</a>
+			</div>
+			<div class="menu__row menu__row-nav">
+				<a class="menu__title-row">Пн. – Пт.: с 9:00 до 18:00</a>
 			</div>
 		</div>
 	</div>
