@@ -104,6 +104,18 @@
 				}
 			}
 		}
+		&-icon {
+			grid-column: 1 span;
+			border-radius: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #f4f4f4;
+			& svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
 	}
 	&__button {
 		&-phone {
@@ -204,6 +216,14 @@
 		animation: wave 0.5s linear;
 		pointer-events: none;
 		position: absolute;
+	}
+	&__row {
+		&-contacts {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 40px;
+			gap: 4px;
+		}
 	}
 }
 @keyframes wave {

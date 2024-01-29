@@ -81,6 +81,12 @@
 				}
 			}
 		}
+		&-contacts {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: 40px;
+			gap: 4px;
+		}
 	}
 	&__burger {
 		--burger-width: 28px;
@@ -130,6 +136,18 @@
 			&-flex {
 				display: flex;
 				flex-direction: column;
+			}
+		}
+		&-icon {
+			grid-column: 1 span;
+			border-radius: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #f4f4f4;
+			& svg {
+				width: 20px;
+				height: 20px;
 			}
 		}
 	}
