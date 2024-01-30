@@ -113,6 +113,7 @@ body {
 }
 .header {
 	color: var(--black-color);
+	padding-top: 8px;
 }
 .header__container {
 	display: -webkit-box;
@@ -352,7 +353,7 @@ body {
 	gap: 18px;
 }
 .header__logo {
-	margin-left: 14px;
+	margin-left: 24px;
 }
 .header__wave {
 	background: rgba(255, 255, 255, 0.64);
@@ -431,7 +432,7 @@ body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	gap: 26px;
+	gap: 30px;
 }
 .nav__link {
 	display: -webkit-box;
