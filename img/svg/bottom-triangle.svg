@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     version="1.1"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="512"
+     height="512"
+     x="0"
+     y="0"
+     viewBox="0 0 512.02 512.02"
+     style="enable-background:new 0 0 512 512"
+     xml:space="preserve"
+     class=""
+     id="bottom-triangle">
+    <g>
+        <path d="M503.155 74.451a69 69 0 0 0-61.14-36.1h-372a69.001 69.001 0 0 0-61.15 36.1 69 69 0 0 0 2 71l186 295.55a69.5 69.5 0 0 0 59.15 32.67 69.502 69.502 0 0 0 59.14-32.67l186-295.55a69 69 0 0 0 2-71z"
+              fill="#000000"
+              opacity="1"
+              data-original="#000000"
+              class="" />
+    </g>
+</svg>
