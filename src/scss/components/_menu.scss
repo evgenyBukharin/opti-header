@@ -174,7 +174,7 @@
 			color: var(--black-color);
 			transition: color 0.3s ease;
 			&:hover {
-				color: var(--light-blue-color);
+				color: var(--header-light-blue-color);
 			}
 			&-blue {
 				position: relative;
@@ -184,14 +184,14 @@
 				font-size: 14px;
 				line-height: 33px;
 				border-radius: 9px;
-				background: var(--light-blue-color);
+				background: var(--header-light-blue-color);
 				padding: 1px 20px;
 				text-decoration: none;
 				font-weight: 600;
 				&-faded {
 					background: var(--white-color);
-					color: var(--light-blue-color);
-					border: 1px solid var(--light-blue-color);
+					color: var(--header-light-blue-color);
+					border: 1px solid var(--header-light-blue-color);
 					margin-top: 14px;
 				}
 			}

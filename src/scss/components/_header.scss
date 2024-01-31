@@ -1,6 +1,7 @@
 .header {
 	color: var(--black-color);
-	padding-top: 8px;
+	padding-top: 10px;
+	padding-bottom: 6px;
 	&__container {
 		// padding-top: 12px;
 		// padding-bottom: 12px;
@@ -21,6 +22,7 @@
 				opacity: 0;
 				visibility: hidden;
 				transition: opacity 0.3s ease, visibility 0.3s ease;
+				z-index: 997;
 				&:hover {
 					opacity: 1;
 					visibility: visible;
@@ -79,7 +81,7 @@
 			align-items: flex-start;
 			transition: color 0.3s ease;
 			&:hover {
-				color: var(--light-blue-color);
+				color: var(--header-light-blue-color);
 			}
 		}
 		&-text {
@@ -126,7 +128,7 @@
 			color: var(--black-color);
 			transition: color 0.3s ease;
 			&:hover {
-				color: var(--light-blue-color);
+				color: var(--header-light-blue-color);
 			}
 			&-blue {
 				position: relative;
@@ -136,7 +138,7 @@
 				font-size: 14px;
 				line-height: 33px;
 				border-radius: 9px;
-				background: var(--light-blue-color);
+				background: var(--header-light-blue-color);
 				padding: 1px 20px;
 				text-decoration: none;
 				font-weight: 600;
@@ -158,10 +160,10 @@
 			&:hover {
 				& .header {
 					&__icon {
-						fill: var(--light-blue-color);
+						fill: var(--header-light-blue-color);
 					}
 					&__button-text {
-						color: var(--light-blue-color);
+						color: var(--header-light-blue-color);
 					}
 				}
 			}
@@ -173,10 +175,10 @@
 			&:hover {
 				& .header {
 					&__icon-location {
-						stroke: var(--light-blue-color);
+						stroke: var(--header-light-blue-color);
 					}
 					&__location {
-						color: var(--light-blue-color);
+						color: var(--header-light-blue-color);
 					}
 				}
 			}

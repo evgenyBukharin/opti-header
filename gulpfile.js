@@ -62,6 +62,18 @@ const svgSprites = () => {
 				},
 			})
 		)
+		.pipe(
+			cheerio({
+				run: function ($) {
+					$("[fill]").removeAttr("fill");
+					$("[stroke]").removeAttr("stroke");
+					$("[style]").removeAttr("style");
+				},
+				parserOptions: {
+					xmlMode: true,
+				},
+			})
+		)
 		.pipe(replace("&gt;", ">"))
 		.pipe(
 			svgSprite({
@@ -74,7 +86,6 @@ const svgSprites = () => {
 		)
 		.pipe(dest(paths.buildImgFolder));
 };
-
 // scss styles
 const styles = () => {
 	return src(paths.srcScss, { sourcemaps: !isProd })
