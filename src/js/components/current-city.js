@@ -1,13 +1,26 @@
-const url = new URL(window.location.href);
-if (url.searchParams.get("city") == null) {
-	url.searchParams.set("city", "Челябинск");
-}
-history.pushState(null, null, url);
+let citiesList = [];
+fetch("http://localhost:3000/citiesList")
+	.then((response) => response.json())
+	.then((cities) => {
+		citiesList = cities;
+		drawCities(citiesList);
+		initApp();
+	});
 
-const currentCityTextContainers = document.querySelectorAll(".currentCity");
-currentCityTextContainers.forEach((textContainer) => {
-	textContainer.innerHTML = url.searchParams.get("city");
-});
+function initApp() {
+	const url = new URL(window.location.href);
+	if (url.searchParams.get("city") == null) {
+		url.searchParams.set("city", "Челябинск");
+	}
+	if (!citiesList.includes(url.searchParams.get("city"))) {
+		url.searchParams.set("city", citiesList[0]);
+	}
+	history.pushState(null, null, url);
+	const currentCityTextContainers = document.querySelectorAll(".currentCity");
+	currentCityTextContainers.forEach((textContainer) => {
+		textContainer.innerHTML = url.searchParams.get("city");
+	});
+}
 
 const cityButtons = document.querySelectorAll(".menu__link-inner-city");
 cityButtons.forEach((btn) => {
@@ -19,7 +32,6 @@ cityButtons.forEach((btn) => {
 });
 
 const resultsContainer = document.querySelector(".city__results");
-const citiesList = ["Челябинск", "Екатеринбург", "Москва", "Магнитогорск"];
 function drawCities(cities, applyClick = true) {
 	resultsContainer.innerHTML = "";
 	cities.forEach((city) => {
@@ -36,8 +48,6 @@ function drawCities(cities, applyClick = true) {
 		resultsContainer.appendChild(newResult);
 	});
 }
-
-drawCities(citiesList);
 
 const searchInput = document.getElementById("city-search");
 searchInput.addEventListener("input", () => {
