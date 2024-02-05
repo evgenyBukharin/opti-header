@@ -1,5 +1,6 @@
+const url = new URL(window.location.href);
 let citiesList = [];
-fetch("http://localhost:3000/citiesList")
+fetch("https://opti.ooo/handlers/getCities.php")
 	.then((response) => response.json())
 	.then((cities) => {
 		citiesList = cities;
@@ -8,7 +9,6 @@ fetch("http://localhost:3000/citiesList")
 	});
 
 function initApp() {
-	const url = new URL(window.location.href);
 	if (url.searchParams.get("city") == null) {
 		url.searchParams.set("city", "Челябинск");
 	}
